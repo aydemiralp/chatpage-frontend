@@ -8,6 +8,8 @@
     list-style: none;
 }
 
+
+
 html,
 body {
     height: 100%;
@@ -21,7 +23,7 @@ body {
 }
 
 .chat .sidebar{
-    width: 300px;
+    width: 330px;
     min-width: 300px;
     background: #f5f5f5;
     display: flex;
@@ -31,7 +33,7 @@ body {
 .chat .sidebar .search {
 
     height: 50px;
-    min-height: 40px;
+    min-height: 50px;
     border-bottom: 1px solid #ddd;
     position: relative;
     padding: 0 10px;
@@ -55,7 +57,7 @@ body {
     position: absolute ;
     top: 0;
     right: 0;
-    width: 40px;
+    width: 37px;
     height: 50px;
     display: flex;
     align-items:  center;
@@ -97,7 +99,7 @@ body {
 
     font-size: 15px;
     color: #333;
-    font-weight: 500px;
+    font-weight: 500;
     margin-bottom: 3px;
 }
 
@@ -108,7 +110,7 @@ body {
 
 }
 
-.chat .sidebar .contacts ul li a.notification {
+.chat .sidebar .contacts ul li a .notification {
 
     width: 18px;
     height:18px;
@@ -124,6 +126,8 @@ body {
 .chat .content {
     flex: 1;
     border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat .content .message-header{
@@ -134,11 +138,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  0 15px;
+    padding:  0 0 0 15px;
 }
 
-.chat .content .message-header .user-info{
-
+.chat .content .message-header .user-info {
     display: flex;
     align-items: center;
 }
@@ -154,18 +157,151 @@ body {
 .chat .content .message-header .user-info  .user .name {
 
     font-size: 15px;
-    font-weight: 500px;
-    color: #222;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+
+    
 
 
 }
 
-.chat .content .message-header .user-info .time {
+.chat .content .message-header .user-info .user .time{
 
     font-size: 13px;
-    color: #999;
+    color: rgb(0, 0, 0);
+    font-family:Arial, Helvetica, sans-serif;
+    
+    
 }
 
-.chat .content.message-header .actions {
+.chat .content.message-header .actions ul {
     display: flex;
 }
+
+.chat .content .message-header .actions ul li a {
+
+    font-size: 19px;
+    color: #999;
+    width: 30px;
+    display: block;
+    text-align: center;
+}
+
+.chat .content .message-header .actions ul li a:hover {
+
+    color:#222;
+}
+
+.chat .content .message-content{
+
+    flex:  1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.chat .content .message-content .message{
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.chat .content .message-content .message .bubble {
+    padding:  6px 12px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    background: #2196f3;
+}
+.chat .content .message-content .message .time {
+    font-size: 12px;
+    color: #222;
+    padding-left: 48px;
+}
+
+.chat .content .message-content .message.me {
+    align-self: flex-end;
+    
+    
+}
+
+.chat .content .message-content .message .me .bubble {
+    background: #ddd;
+    color: #fff;
+}
+
+.chat .content .message-content .message.me .time {
+
+    align-self: flex-end;
+    color: #222;
+}
+
+.chat .content .message-form {
+
+    border-top:  1px solid #ddd;
+    background: #eee;
+    padding:  10px;
+    
+}
+
+.chat .content .message-form ul{
+    display: flex;
+    
+}
+
+.chat .content .message-form ul li{
+    margin: 0 5px ;
+}
+
+
+.chat .content .message-form ul li.input{
+
+    flex: 1;
+    margin-left: 20px;
+   
+    
+    
+}
+
+.chat .content .message-form ul li.input input{
+
+
+    width: 100%;
+    box-sizing: border-box;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 36px;
+    font-size: 14px;
+    padding: 0 15px;
+    
+}
+
+.chat .content .message-form ul li a{
+
+    width: 36px;
+    height:  36px;
+    display: block;
+    border-radius: 50%;
+    background:  #333;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    margin-left: 5px;
+}
+
+.chat .content .message-form ul li.emoji-btn a {
+
+    background: #ee0c0c;
+}
+
+.chat .content .message-form ul li.sound-btn a {
+
+    background: rgb(27, 12, 238);
+}
+
+.chat .content .message-form ul li.image-btn a {
+
+    background-color:rgb(1, 12, 0);
+}
+
+
